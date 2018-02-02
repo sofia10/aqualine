@@ -1,0 +1,38 @@
+@font-face {
+    font-family: 'pantonregular';
+    src: url('../fonts/pantonregular.eot');
+    src: url('../fonts/pantonregular.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/pantonregular.woff2') format('woff2'),
+        url('../fonts/pantonregular.woff') format('woff'),
+        url('../fonts/pantonregular.ttf') format('truetype'),
+        url('../fonts/pantonregular.svg#PantonMtav3-Regular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'pantonbold';
+    src: url('../fonts/pantonbold.eot');
+    src: url('../fonts/pantonbold.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/pantonbold.woff2') format('woff2'),
+        url('../fonts/pantonbold.woff') format('woff'),
+        url('../fonts/pantonbold.ttf') format('truetype'),
+        url('../fonts/pantonbold.svg#PantonMtav3-Bold') format('svg');
+    font-weight: bold;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'dejavu';
+    src: url('../fonts/dejavu.eot');
+    src: url('../fonts/dejavu.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/dejavu.woff2') format('woff2'),
+        url('../fonts/dejavu.woff') format('woff'),
+        url('../fonts/dejavu.ttf') format('truetype'),
+        url('../fonts/dejavu.svg#BPGDejaVuSans-ExtraLight') format('svg');
+    font-weight: 200;
+    font-style: normal;
+}
+
+$pant-reg: 'pantonregular';
+$pant-bold: 'pantonbold';
+$dejavu: 'dejavu';

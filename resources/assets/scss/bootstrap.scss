@@ -1,0 +1,459 @@
+@import "variables.scss";
+// variables
+
+select.form-control:not([size]):not([multiple]) {
+    height: auto;
+}
+/* form-controls */
+
+@mixin btn-colors-function ($background-color, $border-color, $color) {
+    background-color: $background-color;
+    border-color: $border-color;
+    color: $color;
+}
+
+.btn-primary {
+    @include btn-colors-function($primary, $primary, #fff);
+    &:hover,
+    &:not([disabled]):not(.disabled).active,
+    &:not([disabled]):not(.disabled):active {
+        background-color: $primary-dark;
+        border-color: $primary-dark;
+        color: #fff;
+    }
+    &:not([disabled]):not(.disabled).active,
+    &:not([disabled]):not(.disabled):active {
+        @include box-shadow-disable();
+    }
+}
+.btn-secondary {
+    @include btn-colors-function($secondary, $secondary, #fff);
+    &:hover,
+    &:not([disabled]):not(.disabled).active,
+    &:not([disabled]):not(.disabled):active {
+        background-color: $secondary-dark;
+        border-color: $secondary-dark;
+        color: #fff;
+    }
+    &:not([disabled]):not(.disabled).active,
+    &:not([disabled]):not(.disabled):active {
+        @include box-shadow-disable();
+    }
+}
+.btn-success {
+    @include btn-colors-function($success, $success, #fff);
+    &:hover,
+    &:not([disabled]):not(.disabled).active,
+    &:not([disabled]):not(.disabled):active {
+        background-color: $success-dark;
+        border-color: $success-dark;
+        color: #fff;
+    }
+    &:not([disabled]):not(.disabled).active,
+    &:not([disabled]):not(.disabled):active {
+        @include box-shadow-disable();
+    }
+}
+.btn-danger {
+    @include btn-colors-function($danger, $danger, #fff);
+    &:hover,
+    &:not([disabled]):not(.disabled).active,
+    &:not([disabled]):not(.disabled):active {
+        background-color: $danger-dark;
+        border-color: $danger-dark;
+        color: #fff;
+    }
+    &:not([disabled]):not(.disabled).active,
+    &:not([disabled]):not(.disabled):active {
+        @include box-shadow-disable();
+    }
+}
+.btn-warning {
+    @include btn-colors-function($warning, $warning, #fff);
+    &:hover,
+    &:not([disabled]):not(.disabled).active,
+    &:not([disabled]):not(.disabled):active {
+        background-color: $warning-dark;
+        border-color: $warning-dark;
+        color: #fff;
+    }
+    &:not([disabled]):not(.disabled).active,
+    &:not([disabled]):not(.disabled):active {
+        @include box-shadow-disable();
+    }
+}
+.btn-info {
+    @include btn-colors-function($info, $info, #fff);
+    &:hover,
+    &:not([disabled]):not(.disabled).active,
+    &:not([disabled]):not(.disabled):active {
+        background-color: $info-dark;
+        border-color: $info-dark;
+        color: #fff;
+    }
+    &:not([disabled]):not(.disabled).active,
+    &:not([disabled]):not(.disabled):active {
+        @include box-shadow-disable();
+    }
+}
+.btn-light {
+    @include btn-colors-function($light, $light, #111);
+    &:hover,
+    &:not([disabled]):not(.disabled).active,
+    &:not([disabled]):not(.disabled):active {
+        background-color: $light-dark;
+        border-color: $light-dark;
+        color: #111;
+    }
+    &:not([disabled]):not(.disabled).active,
+    &:not([disabled]):not(.disabled):active {
+        @include box-shadow-disable();
+    }
+}
+.btn-dark {
+    @include btn-colors-function($dark, $dark, #fff);
+    &:hover,
+    &:not([disabled]):not(.disabled).active,
+    &:not([disabled]):not(.disabled):active {
+        background-color: $dark-dark;
+        border-color: $dark-dark;
+        color: #fff;
+    }
+    &:not([disabled]):not(.disabled).active,
+    &:not([disabled]):not(.disabled):active {
+        @include box-shadow-disable();
+    }
+}
+.btn-link {
+    color: $primary;
+    &:focus,
+    &:hover {
+        color: $primary-dark;
+    }
+}
+/* btns */
+
+
+.btn-outline-primary {
+    @include btn-colors-function(transparent, $primary, $primary);
+    &:hover,
+    &:not([disabled]):not(.disabled).active,
+    &:not([disabled]):not(.disabled):active {
+        background-color: $primary-dark;
+        border-color: $primary-dark;
+    }
+    &:not([disabled]):not(.disabled).active,
+    &:not([disabled]):not(.disabled):active {
+        @include box-shadow-disable();
+    }
+}
+.btn-outline-secondary {
+    @include btn-colors-function(transparent, $secondary, $secondary);
+    &:hover,
+    &:not([disabled]):not(.disabled).active,
+    &:not([disabled]):not(.disabled):active {
+        background-color: $secondary-dark;
+        border-color: $secondary-dark;
+    }
+    &:not([disabled]):not(.disabled).active,
+    &:not([disabled]):not(.disabled):active {
+        @include box-shadow-disable();
+    }
+}
+.btn-outline-success {
+    @include btn-colors-function(transparent, $success, $success);
+    &:hover,
+    &:not([disabled]):not(.disabled).active,
+    &:not([disabled]):not(.disabled):active {
+        background-color: $success-dark;
+        border-color: $success-dark;
+    }
+    &:not([disabled]):not(.disabled).active,
+    &:not([disabled]):not(.disabled):active {
+        @include box-shadow-disable();
+    }
+}
+.btn-outline-danger {
+    @include btn-colors-function(transparent, $danger, $danger);
+    &:hover,
+    &:not([disabled]):not(.disabled).active,
+    &:not([disabled]):not(.disabled):active {
+        background-color: $danger-dark;
+        border-color: $danger-dark;
+    }
+    &:not([disabled]):not(.disabled).active,
+    &:not([disabled]):not(.disabled):active {
+        @include box-shadow-disable();
+    }
+}
+.btn-outline-warning {
+    @include btn-colors-function(transparent, $warning, $warning);
+    &:hover,
+    &:not([disabled]):not(.disabled).active,
+    &:not([disabled]):not(.disabled):active {
+        background-color: $warning-dark;
+        border-color: $warning-dark;
+    }
+    &:not([disabled]):not(.disabled).active,
+    &:not([disabled]):not(.disabled):active {
+        @include box-shadow-disable();
+    }
+}
+.btn-outline-info {
+    @include btn-colors-function(transparent, $info, $info);
+    &:hover,
+    &:not([disabled]):not(.disabled).active,
+    &:not([disabled]):not(.disabled):active {
+        background-color: $info-dark;
+        border-color: $info-dark;
+    }
+    &:not([disabled]):not(.disabled).active,
+    &:not([disabled]):not(.disabled):active {
+        @include box-shadow-disable();
+    }
+}
+.btn-outline-light {
+    @include btn-colors-function(transparent, $light, $light);
+    &:hover,
+    &:not([disabled]):not(.disabled).active,
+    &:not([disabled]):not(.disabled):active {
+        background-color: $light-dark;
+        border-color: $light-dark;
+    }
+    &:not([disabled]):not(.disabled).active,
+    &:not([disabled]):not(.disabled):active {
+        @include box-shadow-disable();
+    }
+}
+.btn-outline-dark {
+    @include btn-colors-function(transparent, $dark, $dark);
+    &:hover,
+    &:not([disabled]):not(.disabled).active,
+    &:not([disabled]):not(.disabled):active {
+        background-color: $dark-dark;
+        border-color: $dark-dark;
+    }
+    &:not([disabled]):not(.disabled).active,
+    &:not([disabled]):not(.disabled):active {
+        @include box-shadow-disable();
+    }
+}
+/* btn-outlines */
+
+.text-primary {
+    color: $primary!important;
+}
+.text-secondary {
+    color: $secondary!important;
+}
+.text-success {
+    color: $success!important;
+}
+.text-danger {
+    color: $danger!important;
+}
+.text-warning {
+    color: $warning!important;
+}
+.text-info {
+    color: $info!important;
+}
+.text-light {
+    color: $light!important;
+}
+.text-dark {
+    color: $dark!important;
+}
+
+a.text-primary {
+    &:focus,
+    &:hover {
+        color: $primary-dark!important;
+    }
+}
+a.text-secondary {
+    &:focus,
+    &:hover {
+        color: $secondary-dark!important;
+    }
+}
+a.text-success {
+    &:focus,
+    &:hover {
+        color: $success-dark!important;
+    }
+}
+a.text-danger {
+    &:focus,
+    &:hover {
+        color: $danger-dark!important;
+    }
+}
+a.text-warning {
+    &:focus,
+    &:hover {
+        color: $warning-dark!important;
+    }
+}
+a.text-info {
+    &:focus,
+    &:hover {
+        color: $info-dark!important;
+    }
+}
+a.text-light {
+    &:focus,
+    &:hover {
+        color: $light-dark!important;
+    }
+}
+a.text-dark {
+    &:focus,
+    &:hover {
+        color: $dark-dark!important;
+    }
+}
+/* text-colors */
+
+.bg-primary {
+    background-color: $primary!important;
+}
+.bg-secondary {
+    background-color: $secondary!important;
+}
+.bg-success {
+    background-color: $success!important;
+}
+.bg-danger {
+    background-color: $danger!important;
+}
+.bg-warning {
+    background-color: $warning!important;
+}
+.bg-info {
+    background-color: $info!important;
+}
+.bg-light {
+    background-color: $light!important;
+}
+.bg-dark {
+    background-color: $dark!important;
+}
+
+a.bg-primary {
+    &:focus,
+    &:hover {
+        background-color: $primary-dark!important;
+    }
+}
+a.bg-secondary {
+    &:focus,
+    &:hover {
+        background-color: $secondary-dark!important;
+    }
+}
+a.bg-success {
+    &:focus,
+    &:hover {
+        background-color: $success-dark!important;
+    }
+}
+a.bg-danger {
+    &:focus,
+    &:hover {
+        background-color: $danger-dark!important;
+    }
+}
+a.bg-warning {
+    &:focus,
+    &:hover {
+        background-color: $warning-dark!important;
+    }
+}
+a.bg-info {
+    &:focus,
+    &:hover {
+        background-color: $info-dark!important;
+    }
+}
+a.bg-light {
+    &:focus,
+    &:hover {
+        background-color: $light-dark!important;
+    }
+}
+a.bg-dark {
+    &:focus,
+    &:hover {
+        background-color: $dark-dark!important;
+    }
+}
+/* bg-colors */
+
+.border-primary {
+    border-color: $primary!important;
+}
+.border-secondary {
+    border-color: $secondary!important;
+}
+.border-success {
+    border-color: $success!important;
+}
+.border-danger {
+    border-color: $danger!important;
+}
+.border-warning {
+    border-color: $warning!important;
+}
+.border-info {
+    border-color: $info!important;
+}
+.border-light {
+    border-color: $light!important;
+}
+.border-dark {
+    border-color: $dark!important;
+}
+/* border-colors */
+
+.alert-primary {
+    color: darken($primary, 20%);
+    background-color: $primary-lighten;
+    border-color: $primary-dark;
+}
+.alert-secondary {
+    color: darken($secondary, 20%);
+    background-color: $secondary-lighten;
+    border-color: $secondary;
+}
+.alert-success {
+    color: darken($success, 20%);
+    background-color: $success-lighten;
+    border-color: $success;
+}
+.alert-danger {
+    color: darken($danger, 20%);
+    background-color: $danger-lighten;
+    border-color: $danger-dark;
+}
+.alert-warning {
+    color: darken($warning, 20%);
+    background-color: $warning-lighten;
+    border-color: $warning-dark;
+}
+.alert-info {
+    color: darken($info, 20%);
+    background-color: $info-lighten;
+    border-color: $info-dark;
+}
+.alert-light {
+    color: darken($light, 20%);
+    background-color: $light-lighten;
+    border-color: $light-dark;
+}
+.alert-dark {
+    color: darken($dark, 20%);
+    background-color: $dark-lighten;
+    border-color: $dark-dark;
+}
+/* alerts */

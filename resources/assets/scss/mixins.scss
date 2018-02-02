@@ -1,0 +1,28 @@
+@mixin h4(){
+	font-size: 39px;
+	color: #FFF;
+}
+@mixin p{
+	font-size: 12px;
+	color: $dark-grey;
+}
+@mixin h6{
+	font-size: 22px;
+	color: #505050;
+}
+@mixin menu-shadow{
+	-webkit-box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.40);
+	-moz-box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.40);
+	box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.40);
+} 
+@mixin text-shadow{
+	-webkit-text-shadow: 0px 3px 6px #000;
+	-moz-text-shadow: 0px 3px 6px #000;
+	text-shadow: 0px 3px 6px #000;
+}
+@mixin transition{
+	-webkit-transition: all 0.4s ease-in-out;
+    -moz-transition: all 0.4s ease-in-out;
+    -o-transition: all 0.4s ease-in-out;
+    transition: all 0.4s ease-in-out;
+}

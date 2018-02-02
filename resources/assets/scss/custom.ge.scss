@@ -1,0 +1,103 @@
+@import "fonts.ge.scss";
+// fonts
+
+h2,
+h3,
+h4,
+h5,
+h6{
+	font-family: $pant-bold;
+}
+p{
+	font-family: $dejavu;
+}
+nav.burgher{
+	a{
+		font-family: $pant-bold;
+	}
+}	
+.sup-header{
+	span{
+		font-family: $pant-reg;
+	}
+}
+.sub-header{
+	.menu{
+		li{	
+			a{
+				font-family: $pant-bold;
+			}
+		}
+	}
+	input{
+		font-family: $dejavu;
+	}
+}
+.prodtab-item{
+	span{
+		font-family: $pant-reg;
+	}
+}
+.products-more{	
+	span{
+		font-family: $pant-reg;
+	}
+}
+.news{
+	.col-md-6{
+		span{
+			font-family: $pant-reg;
+		}
+		p{
+			font-family: $dejavu;
+		}
+	}
+}
+.info-aqua{
+	span{
+		font-family: $pant-bold;
+	}
+}
+.sub-footer{
+	border-top: 1px solid #E9E9E9;
+	padding-top: 30px;
+	margin-top: 25px;
+    span{
+		font-family: $dejavu;
+    }
+}
+.product-item{
+	a{
+		span{
+			font-family: $pant-bold;
+		}
+	}
+}
+.section-menu{
+    a{
+		font-family: $dejavu;
+    }
+}
+.content-nav{
+	span{
+		font-family: $pant-bold;
+	}
+}
+.blog-item{
+	.blog-title{
+		font-family: $pant-bold;
+	}
+	span{
+		font-family: $pant-bold;
+	}
+}
+.pagination{
+	span{
+		font-family: $pant-bold;
+	}
+}
+.service-info{
+    span{
+		font-family: $pant-bold;
+    }
+}
