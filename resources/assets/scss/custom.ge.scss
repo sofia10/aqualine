@@ -101,3 +101,53 @@ nav.burgher{
 		font-family: $pant-bold;
     }
 }
+.contact-icons{
+	span{
+		font-family: $pant-bold;
+	}
+}
+.inputs{
+	input{
+		font-family: $dejavu;
+	}
+}
+.cont-text{
+	textarea{
+		font-family: $dejavu;
+	}
+	input[type=submit]{
+		font-family: $pant-bold;
+	}
+}
+.news-details{
+	a{
+		font-family: $pant-bold;
+	}
+	.news-date{
+		font-family: $dejavu;
+	}
+}
+.news-text{
+    *{
+		font-family: $dejavu;
+    }
+}
+.hist-title{
+	font-family: $pant-bold;
+}
+.product{
+	.prod-title,
+	.num-prod{
+		font-family: $pant-reg;
+	}
+}
+.files{
+	a{
+		font-family: $pant-reg;
+	}
+}
+.swiper-slide{
+	a{
+		font-family: $pant-reg;
+	}
+}
