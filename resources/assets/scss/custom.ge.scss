@@ -151,3 +151,25 @@ nav.burgher{
 		font-family: $pant-reg;
 	}
 }
+.chemical-items{
+	.blog-item{
+		.details{
+			span{
+				font-family: $pant-bold;
+			}
+		}
+		span{
+			font-family: $pant-reg;
+		}
+	}
+}
+.list-group{
+	.title-list{
+		font-family: $pant-bold;
+	}
+}
+.list-group.link{
+	a{
+		font-family: $pant-reg;
+	}
+}
