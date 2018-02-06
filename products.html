@@ -178,7 +178,7 @@
                     <div class="product">
                         <div class="row">
                             <div class="col-md-4 left-prod">
-                                <section class="gallery-p">
+                                 <section class="gallery-p">
                                     <div class="carousel">
                                         <input type="radio" id="image1" name="gallery-control" checked>
                                         <input type="radio" id="image2" name="gallery-control">
@@ -207,8 +207,10 @@
                                                 </label>
                                             </figure>
                                         </div>
+                                        <div class="next_slide"><i class="fa fa-angle-right"></i></div>
+                                        <div class="prev_slide"><i class="fa fa-angle-left"></i></div>
                                         <div class="thumbnails">
-                                            <label for="image1 " class="thumb">
+                                            <label for="image1" class="thumb">
                                                 <img src="public/files/product1.png">
                                             </label>
                                             <label for="image2" class="thumb">
@@ -409,5 +411,31 @@
                 }
             });
           </script>
+
+           <script type="text/javascript">
+        function sliderPagination(plus = true){
+            var length = $('input[name=gallery-control]').length;
+            var index = $('input[name=gallery-control]:checked').index();
+            if(plus == true)
+                index++;
+            else
+                index--;
+
+            if(index == length){
+                index = 0;
+            }
+            $('input[name=gallery-control]').removeAttr('checked');
+            $('input[name=gallery-control]').eq(index).click();
+        }
+        
+        $('.next_slide').click(function(){
+            sliderPagination(true);
+        });
+
+        $('.prev_slide').click(function(){
+            sliderPagination(false);
+        });
+    </script>
+
     </body>
 </html>
