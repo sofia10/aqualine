@@ -32,6 +32,8 @@
         <link type="text/css" rel="stylesheet" href="public/assets/site/plugins/bootstrap/css/bootstrap.min.css">
         <link type="text/css" rel="stylesheet" href="public/assets/site/plugins/fontawesome/css/font-awesome.min.css">
         <link type="text/css" rel="stylesheet" href="public/assets/site/plugins/swiperSlider/css/swiper.min.css">
+        <link type="text/css" rel="stylesheet" href="public/assets/site/plugins/slick/css/slick.css">
+        <link type="text/css" rel="stylesheet" href="public/assets/site/plugins/slick/css/slick-lightbox.css">
         <link type="text/css" rel="stylesheet" href="public/assets/site/layout/css/layout.ge.css">
     </head>
     <body>
@@ -178,53 +180,42 @@
                     <div class="product">
                         <div class="row">
                             <div class="col-md-4 left-prod">
-                                 <section class="gallery-p">
-                                    <div class="carousel">
-                                        <input type="radio" id="image1" name="gallery-control" checked>
-                                        <input type="radio" id="image2" name="gallery-control">
-                                        <input type="radio" id="image3" name="gallery-control">
-                                        <input type="radio" id="image4" name="gallery-control">
-                                        <input type="checkbox" id="fullscreen" name="gallery-fullscreen-control"/>
-                                        <div class="wrap">
-                                            <figure>
-                                                <label for="fullscreen">
-                                                    <img src="public/files/product1.png" alt="image1"/>
-                                                </label>
-                                            </figure>
-                                            <figure>
-                                                <label for="fullscreen">
-                                                    <img src="public/files/product2.png" alt="image2"/>
-                                                </label>
-                                            </figure>
-                                            <figure>
-                                                <label for="fullscreen">
-                                                    <img src="public/files/product3.png" alt="image3" />
-                                                </label>
-                                            </figure>
-                                            <figure>
-                                                <label for="fullscreen">
-                                                    <img src="public/files/product4.png" alt="image4"/>
-                                                </label>
-                                            </figure>
+                                <div class="main">
+                                    <div class="slider slider-for">
+                                        <div>
+                                            <img src="public/files/webo.png">
                                         </div>
-                                        <div class="next_slide"><i class="fa fa-angle-right"></i></div>
-                                        <div class="prev_slide"><i class="fa fa-angle-left"></i></div>
-                                        <div class="thumbnails">
-                                            <label for="image1" class="thumb">
-                                                <img src="public/files/product1.png">
-                                            </label>
-                                            <label for="image2" class="thumb">
-                                                <img src="public/files/product2.png">
-                                            </label>
-                                            <label for="image3" class="thumb">
-                                                <img src="public/files/product3.png">
-                                            </label>
-                                            <label for="image4" class="thumb">
-                                                <img src="public/files/product4.png">
-                                            </label>
+                                        <div>
+                                            <img src="public/files/ragaca.png">
+                                        </div>
+                                        <div>
+                                            <img src="public/files/kidewebo.png">
+                                        </div>
+                                        <div>
+                                            <img src="public/files/kraska.png">
+                                        </div>
+                                        <div>
+                                            <img src="public/files/product.png">
                                         </div>
                                     </div>
-                                </section>
+                                    <div class="slider slider-nav">
+                                        <div>
+                                            <img src="public/files/webo.png">
+                                        </div>
+                                        <div>
+                                            <img src="public/files/ragaca.png">
+                                        </div>
+                                        <div>
+                                            <img src="public/files/kidewebo.png">
+                                        </div>
+                                        <div>
+                                            <img src="public/files/kraska.png">
+                                        </div>
+                                        <div>
+                                            <img src="public/files/product.png">
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                             <div class="col-md-8 right-prod">
                                 <div class="prod-title">Dinolgin</div>
@@ -376,6 +367,8 @@
 		</div>
         <script src="public/assets/site/plugins/jquery/jquery-3.2.1.min.js"></script>
         <script src="public/assets/site/plugins/popper/js/popper.min.js"></script>
+        <script src="public/assets/site/plugins/slick/js/slick.min.js"></script>
+        <script src="public/assets/site/plugins/slick/js/slick-lightbox.min.js"></script>
         <script src="public/assets/site/plugins/bootstrap/js/bootstrap.min.js"></script>
         <script src="public/assets/site/plugins/swiperSlider/js/swiper.min.js"></script>
         <script src="public/assets/site/layout/js/global.js"></script>
@@ -411,31 +404,22 @@
                 }
             });
           </script>
-
-           <script type="text/javascript">
-        function sliderPagination(plus = true){
-            var length = $('input[name=gallery-control]').length;
-            var index = $('input[name=gallery-control]:checked').index();
-            if(plus == true)
-                index++;
-            else
-                index--;
-
-            if(index == length){
-                index = 0;
-            }
-            $('input[name=gallery-control]').removeAttr('checked');
-            $('input[name=gallery-control]').eq(index).click();
-        }
-        
-        $('.next_slide').click(function(){
-            sliderPagination(true);
-        });
-
-        $('.prev_slide').click(function(){
-            sliderPagination(false);
-        });
-    </script>
-
+          <script type="text/javascript">
+            $('.slider-for').slick({
+              slidesToShow: 1,
+              slidesToScroll: 1,
+              arrows: false,
+              fade: true,
+              asNavFor: '.slider-nav'
+            });
+            $('.slider-nav').slick({
+              slidesToShow:4,
+              slidesToScroll: 1,
+              asNavFor: '.slider-for',
+              dots: false,
+              centerMode: false,
+              focusOnSelect: true
+            });
+          </script>
     </body>
 </html>
