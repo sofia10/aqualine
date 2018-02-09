@@ -31,7 +31,7 @@
         <meta name="theme-color" content="#ffffff">
         <link type="text/css" rel="stylesheet" href="public/assets/site/plugins/bootstrap/css/bootstrap.min.css">
         <link type="text/css" rel="stylesheet" href="public/assets/site/plugins/fontawesome/css/font-awesome.min.css">
-        <link type="text/css" rel="stylesheet" href="public/assets/site/plugins/jssor-slider/css/jssor.css">
+        <link type="text/css" rel="stylesheet" href="public/assets/site/plugins/slick/css/slick.css">
         <link type="text/css" rel="stylesheet" href="public/assets/site/layout/css/layout.ge.css">
     </head>
     <body>
@@ -43,7 +43,7 @@
                             <div class="row">
                                 <div class="col-md-6 d-flex">
                                     <div class="icon-head"></div>
-                                    <span>info@aqualine.ge</span>
+                                    <a href="mailto:iNFO@AQUALINE.GE">iNFO@AQUALINE.GE</a>
                                     <div class="icon-head" style="background-position: -13px 0;"></div>
                                     <span>თბილისი, კარტოზიას ქ. 6</span>
                                 </div>
@@ -173,47 +173,39 @@
                     </div>
                 </section>
                 <div class="container">
-                    <div class="news-cont">
-                        <!-- jssor-slider -->
-                                    <div id="jssor_1" style="position:relative;margin:0 auto;top:0px;left:0px;width:1700px;height:600px;overflow:hidden;visibility:hidden;">
-
-                                        <!-- Loading Screen -->
-                                        <div data-u="slides" style="cursor:default;position:relative;top:0px;left:0px;width:1700px;height:600px;overflow:hidden;">
-                                            <div data-p="170.00">
-                                                <img data-u="image" src="public/files/news.png" />
-                                                <img data-u="thumb" src="public/files/news.png" />
-                                            </div>
-                                            <div data-p="170.00">
-                                                <img data-u="image" src="public/files/gallery1.png" />
-                                                <img data-u="thumb" src="public/files/gallery1.png" />
-                                            </div>
-                                            <div data-p="170.00">
-                                                <img data-u="image" src="public/files/gallery2.png" />
-                                                <img data-u="thumb" src="public/files/gallery2.png" />
-                                            </div>
-                                            <div data-p="170.00">
-                                                <img data-u="image" src="public/files/gallery4.png" />
-                                                <img data-u="thumb" src="public/files/gallery4.png" />
-                                            </div>
+                    <div class="news-cont history-content">
+                        <!-- slick-slider -->
+                               <div class="main history-slide">
+                                    <div class="slider slider-for">
+                                        <div>
+                                            <h5>ფოტოსლოგანის ადგილი</h5>
+                                            <img src="public/files/news.png">
                                         </div>
-                                        <!-- Thumbnail Navigator -->
-                                        <div data-u="thumbnavigator" class="jssort101" style="position:absolute;left:0px;bottom:0px;width:1700px;height:100px;background-color:transparent;" data-autocenter="1" data-scale-bottom="0.75">
-                                            <div data-u="slides">
-                                                <div data-u="prototype" class="p" style="width:100px;height:100px;">
-                                                    <div data-u="thumbnailtemplate" class="t"></div>
-                                                </div>
-                                            </div>
+                                         <div>
+                                            <h5>ფოტოსლოგანის ადგილი1</h5>
+                                            <img src="public/files/blog2.png">
                                         </div>
-                                        <!-- Arrow Navigator -->
-                                        <div data-u="arrowleft" class="jssora106" style="width:55px;height:55px;top:162px;left:30px;" data-scale="0.75">
-                                        </div>
-                                        <div data-u="arrowright" class="jssora106" style="width:55px;height:55px;top:162px;right:30px;" data-scale="0.75">
-                                        </div>
-                                         <div class="slider-title">
-                                            <h6>ფოტოსლოგანის ადგილი</h6>
+                                        <div>
+                                            <h5>ფოტოსლოგანის ადგილი2</h5>
+                                            <img src="public/files/blog3.png">
                                         </div>
                                     </div>
-                                <!-- jssor-slider end -->
+                                    <div class="slider slider-nav">
+                                        <div>
+                                            <img src="public/files/news.png">
+                                            <div class="slider-bgr"></div>
+                                        </div>
+                                        <div>
+                                            <img src="public/files/blog2.png">
+                                            <div class="slider-bgr"></div>
+                                        </div>
+                                        <div>
+                                            <img src="public/files/blog3.png">
+                                            <div class="slider-bgr"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                        <!-- slick-slider end -->
                         <div class="news-details">
                             <div class="news-text">
                                 <p>საბეჭდი და ტიპოგრაფიული ინდუსტრიის უშინაარსო ტექსტია. იგი სტანდარტად 1500-იანი წლებიდან იქცა, როდესაც უცნობმა მბეჭდავმა ამწყობ დაზგაზე წიგნის საცდელი ეგზემპლარი დაბეჭდა. მისი ტექსტი არამარტო 5 საუკუნის მანძილზე შემორჩა, არამედ მან დღემდე, ელექტრონული ტიპოგრაფიის დრომდეც უცვლელად მოაღწია. განსაკუთრებული პოპულარობა მას 1960-იან წლებში გამოსულმა Letraset-ის ცნობილმა ტრაფარეტებმა მოუტანა, უფრო მოგვიანებით კი — Aldus PageMaker-ის ტიპის საგამომცემლო პროგრამებმა, რომლებშიც Lorem Ipsum-ის სხვადასხვა ვერსიები იყო ჩაშენებული.</p>
@@ -260,7 +252,7 @@
                                             </div>  
                                             <div class="group-cont d-flex align-items-center">
                                                 <div class="icon-cont"></div>
-                                                <span>iNFO@AQUALINE.GE</span>
+                                                <a href="mailto:iNFO@AQUALINE.GE">iNFO@AQUALINE.GE</a>
                                             </div>
                                         </div>
                                     </div>
@@ -284,8 +276,24 @@
         <script src="public/assets/site/plugins/jquery/jquery-3.2.1.min.js"></script>
         <script src="public/assets/site/plugins/popper/js/popper.min.js"></script>
         <script src="public/assets/site/plugins/bootstrap/js/bootstrap.min.js"></script>
-        <script src="public/assets/site/plugins/jssor-slider/js/jssor.slider-26.7.0.min.js"></script>
-        <script src="public/assets/site/plugins/jssor-slider/js/jssor.js"></script>
+        <script src="public/assets/site/plugins/slick/js/slick.min.js"></script>
         <script src="public/assets/site/layout/js/global.js"></script>
+        <script type="text/javascript">
+            $('.slider-for').slick({
+              slidesToShow: 1,
+              slidesToScroll: 1,
+              arrows: false,
+              fade: true,
+              asNavFor: '.slider-nav'
+            });
+            $('.slider-nav').slick({
+              slidesToShow:3,
+              slidesToScroll: 1,
+              asNavFor: '.slider-for',
+              dots: false,
+              centerMode: false,
+              focusOnSelect: true
+            });
+          </script>
     </body>
 </html>

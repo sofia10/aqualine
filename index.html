@@ -76,7 +76,7 @@
                             <div class="row">
                                 <div class="col-md-6 d-flex">
                                     <div class="icon-head"></div>
-                                    <span>info@aqualine.ge</span>
+                                    <a href="mailto:iNFO@AQUALINE.GE">iNFO@AQUALINE.GE</a> 
                                     <div class="icon-head" style="background-position: -13px 0;"></div>
                                     <span>თბილისი, კარტოზიას ქ. 6</span>
                                 </div>
@@ -154,17 +154,16 @@
                                             <label for="nav" class="nav-open"><i></i><i></i><i></i></label>
                                         </div>
                                         <div class="nav-container">
-                                            <ul class="burger-m row justify-content-end"">
+                                            <ul class="burger-m row ">
                                                 <li><a href="#!">ჩვენს შესახებ</a></li>
-                                                <li>
-                                                    <a href="#!">პროდუქცია</a>
-                                                    <ul class="menu-drop">
-                                                        <li>
-                                                            <a href="#!" class="d-flex justify-content-between">
-                                                                <span>აუზები</span>
-                                                                <i class="fa fa-angle-right" aria-hidden="true"></i>
-                                                            </a>
-                                                            <ul class="inner-menudrop">
+                                                <li class="d-flex flex-column navi-drop">
+                                                    <span class="d-flex align-items-center"><a href="#!">პროდუქცია</a>
+                                                    <i class="fa fa-chevron-down"></i></span>
+                                                    <ul class="menu-drop nav-men">
+                                                        <li class="d-flex flex-column">
+                                                            <span class="d-flex align-items-center inner-dropdown"><a href="#!">აუზები</a>
+                                                            <i class="fa fa-chevron-down"></i></span>
+                                                            <ul class="inner-menudrop inner-nav">
                                                                 <li>
                                                                     <a href="#!">დანადგარები</a>
                                                                 </li>
@@ -179,14 +178,9 @@
                                                                 </li>
                                                             </ul>
                                                         </li>
-                                                        <li><a href="#!" class="d-flex justify-content-between">
-                                                            <span>საუნები</span>
-                                                            <i class="fa fa-angle-right" aria-hidden="true"></i>
-                                                        </a></li>
-                                                        <li><a href="#!" class="d-flex justify-content-between">
-                                                            <span>წყლის საწმენდი სისტემები</span>
-                                                            <i class="fa fa-angle-right" aria-hidden="true"></i>
-                                                        </a></li>
+                                                        <li><a href="#!">საუნები</a></li>
+                                                        <li><a href="#!">წყლის საწმენდი სისტემები</a>
+                                                        </li>
                                                     </ul>
                                                 </li>
                                                 <li><a href="#!">მომსახურება</a></li>
@@ -247,6 +241,7 @@
                                 <a href="#!" class="inner-tab d-flex align-items-center">
                                     <div class="left-tab">
                                         <img src="public/assets/site/layout/images/swim.png">
+                                        <img src="public/assets/site/layout/images/swim-b.png" class="hover-b">
                                     </div>
                                     <h3>საცურაო აუზები</h3>
                                 </a>
@@ -255,6 +250,7 @@
                                 <a href="#!" class="inner-tab d-flex align-items-center">
                                     <div class="left-tab">
                                         <img src="public/assets/site/layout/images/sauna.png">
+                                        <img src="public/assets/site/layout/images/sauna-b.png" class="hover-b">
                                     </div>
                                     <h3>საუნები</h3>
                                 </a>
@@ -264,6 +260,7 @@
                                 <a href="#!" class="inner-tab d-flex align-items-center">
                                     <div class="left-tab">
                                         <img src="public/assets/site/layout/images/drop.png">
+                                        <img src="public/assets/site/layout/images/drop-b.png" class="hover-b">
                                     </div>
                                     <h3>წყლის საწმენდი სისტემები</h3>
                                 </a>
@@ -450,7 +447,7 @@
                                             </div>  
                                             <div class="group-cont d-flex align-items-center">
                                                 <div class="icon-cont"></div>
-                                                <span>iNFO@AQUALINE.GE</span>
+                                                <a href="mailto:iNFO@AQUALINE.GE">iNFO@AQUALINE.GE</a> 
                                             </div>
                                         </div>
                                     </div>
@@ -528,6 +525,14 @@
                     }
                 }
             });
+          </script>
+          <script type="text/javascript">
+              $('.navi-drop').click(function(){
+                $('.nav-men').fadeToggle('slow');
+              });
+              $('.inner-dropdown').click(function(){
+                $('.inner-nav').fadeToggle('slow');
+              });
           </script>
     </body>
 </html>

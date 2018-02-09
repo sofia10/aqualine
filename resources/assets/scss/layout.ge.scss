@@ -73,7 +73,7 @@ nav.burgher{
                 text-decoration: none;
                 letter-spacing: .04em;
                 &:hover{
-                    color: gray;
+                    color: $blue;
                     text-decoration: none;
                 }
             }   
@@ -100,8 +100,11 @@ nav.burgher{
                 display: block;
                 float: none;
                 width: 100%;
-                text-align: right;
                 margin-bottom: 10px;
+                i{
+                    color: $blue;
+                    font-size: 14px;
+                }
                 &:nth-child(1){
                     a{
                         transition-delay: .2s;
@@ -143,6 +146,9 @@ nav.burgher{
                   font-weight: 600;
                   transform: translateY(-20px);
                   transition: all .2s ease;
+                  &:hover{
+                    color: $blue;
+                  }
                 }
                 .call{
                     display: flex;
@@ -158,6 +164,32 @@ nav.burgher{
                         color: #000;
                         span{
                             font-size: 10px;
+                        }
+                    }
+                }
+                .nav-men{
+                    position: relative;
+                    top: 0;
+                    transform: initial;
+                    width: initial;
+                    margin-left: 20px;
+                    display: none;
+                    li{
+                        a{
+                            font-size: 14px; 
+                        }
+                        .inner-nav{
+                            position: relative;
+                            top: 0;
+                            transform: initial;
+                            width: initial;
+                            margin-left: 20px;
+                            display: none;
+                            li{
+                                a{
+                                    font-size: 11px;
+                                }
+                            }
                         }
                     }
                 }
@@ -239,13 +271,27 @@ nav.burgher{
         .sup-header{
             margin: 15px 0 25px 0;
             .col-md-6{
-                span{
+                span, a{
                     font-size: 11px;
                     color: $grey;
                     margin-right: 30px;
+                    @media (max-width: 767px){
+                        margin-right: 0;
+                    }
+                    @media (max-width: 991px){
+                        font-size: 10px;
+                    }
                     @media(max-width: 575px){
                         margin-right: 5px;
                         font-size: 10px;
+                    }
+                }
+                a{
+                    &:hover{
+                        color: $blue;
+                    }
+                    @media (max-width: 767px){
+                        margin-right: 20px;
                     }
                 }
                 .icon-head{
@@ -258,7 +304,7 @@ nav.burgher{
                 }
                 .social-icons{
                     a{
-                        margin-left: 10px;
+                        margin-right: 10px;
                         i{
                             color: #CCC;
                             &:hover{
@@ -275,11 +321,14 @@ nav.burgher{
                     i{
                         color: $blue;
                     }
+                    a{
+                        margin-right: 10px;
+                    }
                     @media (max-width: 767px){
                         margin-left: 0;
                     }
                 }
-                @media (max-width: 440px){
+                @media (max-width: 767px){
                     justify-content: center!important;
                 }
             }
@@ -527,6 +576,7 @@ nav.burgher{
             .inner-tab{
                 height: 100%;
                 background-color: $blue;
+                border: 1px solid $blue;
                 .left-tab{
                     width: 40%;
                     display: flex;
@@ -539,12 +589,29 @@ nav.burgher{
                             margin-left: 10px;
                         }
                     }
+                    .hover-b{
+                        display: none;
+                    }
                 }
                 h3{
                     font-size: 26px;
                     color: #FFF;
                     @media (max-width: 1200px){
                         font-size: 20px;
+                    }
+                }
+                &:hover{
+                    background-color: #FFF;
+                    h3{
+                        color: $blue;
+                    }
+                    .left-tab{
+                        img{
+                            display: none;
+                        }
+                        .hover-b{
+                            display: block;
+                        }
                     }
                 }
             }
@@ -653,7 +720,7 @@ nav.burgher{
                     height: 200px;
                 }
             }
-            span{
+            .pr-name{
                 font-size: 14px;
                 color: #434343; 
                 margin-top: 12px;
@@ -750,17 +817,26 @@ nav.burgher{
                     background: #f0f0f0;
                     @include transition;
                     &:hover{
-                        width: 130%;
-                        height: 410px;
-                        margin-top: -130px;
+                        width: 115%;
+                        height: 350px;
+                        margin-top: -110px;
                         margin-left: -130px;
                         top: 30%;
                         left: 12%;
-                        @media (max-width: 1250px){
+                        @media (max-width: 2000px){
+                            width: 117%;
                             left: 25%;
+                            margin-top: -120px;
                         }
-                        @media (max-width: 900px){
+                        @media (max-width: 1250px){
+                            left: 35%;
+                        }
+                        @media (max-width: 1000px){
                             left: 55%;
+                        }
+                        @media (max-width: 991px){
+                            height: 230px!important;
+                            left: 50%;
                         }
                     }
                     @media (max-width: 1400px){
@@ -788,18 +864,18 @@ nav.burgher{
                 flex-direction: column;
                 li{
                     width: 100%;
-                    height: 430px;
+                    height: 430px!important;
                     img{
                         &:hover{
                             top: 0;
                             left: 0;
-                            height: 100%;
+                            height: 100%!important;
                             margin: initial;
                             width: 100%;
                         }
                     }
                     @media (max-width: 660px){
-                        height: 300px;
+                        height: 300px!important;
                     }
                 }
             }
@@ -878,11 +954,16 @@ footer{
                     height: 30px;
                     margin-right: 10px;
                 }
-                span{
+                a, span{
                     color: $grey;
                     font-size: 13px;
                     @media (max-width: 991px){
                         font-size: 12px; 
+                    }
+                }
+                a{
+                    &:hover{
+                        color: $blue;
                     }
                 }
                 @media (max-width: 991px){
@@ -918,6 +999,9 @@ footer{
     background-color: $blue;
     padding: 30px 0;
     margin-top: 30px;
+    -moz-box-shadow: 0 3px 3px rgba(0, 0, 0, 0.3);
+    -webkit-box-shadow: 0 3px 3px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 3px 3px rgba(0, 0, 0, 0.3);
     h5{
         font-size: 24px;
         color: #FFF;
@@ -1178,7 +1262,8 @@ footer{
                     margin-left: 20px;
                 }
                 @media (max-width: 767px){
-                    justify-content: center;
+                    align-items: center;
+                    width: 290px;
                 } 
             }
         }
@@ -1255,53 +1340,7 @@ footer{
         width: 100%;
         max-height: 540px; 
     }
-    #jssor_1{
-        overflow: visible!important;
-        div:nth-child(2){
-            bottom: -50px!important;
-            div > div > div > div:nth-child(2) > div{
-                cursor: pointer;
-                border: 2px solid #FFF;
-            }
-            @media (max-width: 1500px){
-                bottom: -20px!important;
-            }
-            @media (max-width: 460px){
-                bottom: -5px!important;
-            }
-        }
-        div:nth-child(3)>div>div>div>div:nth-child(2)>div{
-            cursor: pointer;
-        }
-        .slider-title{
-            position: absolute;
-            bottom: 0;
-            display: flex;
-            align-items: flex-end;
-            width: 500px;
-            h6{
-                @include h6;
-                color: #FFF;
-                margin-bottom: 30px;
-                margin-left: 50px;
-            }
-        }
-    }
-    #jssor_1 > div:nth-child(2) > div > div{
-        width: 100%!important;
-        right: 0;
-        left: 0!important;
-    }
-    #jssor_1 > div:nth-child(2) > div > div > div{
-        right: 40px;
-        left: initial!important;
-    }
-    #jssor_1 > div:nth-child(2) > div > div > div > div:nth-child(2) > div > div.p > img{
-        object-fit: cover;
-        object-position: center;
-        width: 100%;
-        height: 100%;
-    }
+  
     .news-details{
         width: 100%;
         margin-top: 70px;
@@ -1325,7 +1364,7 @@ footer{
                 }
             }
             .news-right{
-                a{
+                .back{
                     border: 1px solid $blue;
                     color: #FFF;
                     font-size: 16px;
@@ -1363,6 +1402,7 @@ footer{
             }
             ul{
                 margin-left: 20px;
+                margin-bottom: 20px;
                 li{
                     margin-top: 22px;
                     position: relative;
@@ -1391,6 +1431,53 @@ footer{
                 color: #000; 
                 margin: 50px 0 30px 0;
             }
+        }
+        .news-right{
+            .back{
+                border: 1px solid $blue;
+                color: #FFF;
+                font-size: 16px;
+                padding: 12px 20px;
+                background-color: $blue;
+                i{
+                    font-size: 11px;
+                    margin-right: 10px;
+                }
+                span{
+                    color: #FFF;
+                }
+                &:hover{
+                    background-color: #FFF;
+                    span{
+                        color: $blue;
+                    }
+                }
+                @media (max-width: 767px){
+                    display: none;
+                }
+            }
+        }
+        .res-back{
+            padding-top: 20px;
+            a{
+                display: none!important;
+                @media (max-width: 767px){
+                    display: block!important;
+                }
+                &:hover{
+                    background-color: #FFF;
+                    span,i{
+                        color: $blue;
+                    }
+                }
+                i{
+                    font: normal normal normal 14px/1 FontAwesome;
+                    color: #FFF; 
+                }
+            }
+        }
+        @media (max-width: 767px){
+            margin-top: 20px;
         }
     }
 }
@@ -1499,6 +1586,9 @@ footer{
         .swiper-button-next, .swiper-button-prev{
             background-image: none;
             margin-top: -10px;
+            @media (max-width: 767px){
+                display: none;
+            }
         }
     }
 }
@@ -1606,7 +1696,7 @@ footer{
     }
 }
 .main{
-    width:500px;
+    width:100%;
     display:block;
     margin:0 auto;
     .slider-for{
@@ -1637,7 +1727,7 @@ footer{
             align-items: center;
             justify-content: center;
             img{
-                max-width: 40px;
+                max-width: 45px;
             }
             &:hover{
                 border-color: $blue;
@@ -1645,6 +1735,83 @@ footer{
         }
         .slick-prev,.slick-next{
             display: none!important;
+        }
+    }
+    @media (max-width: 991px){
+        padding-bottom: 40px;
+    }
+}
+.history-content{
+    max-width: 1200px;
+    margin: 0 auto;
+    margin-top: 60px;
+}
+.history-slide{
+    position: relative;
+    height: 600px;
+    .slider-for{
+        .slick-slide{
+            border: initial;
+            height: 600px;
+            img{
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                object-position: center;
+                width: 100%;
+                height: 100%;
+            }
+            h5{
+                color: #FFF;
+                position: absolute;
+                bottom: 20px;
+                left: 50px;
+            }
+        }
+    }
+    .slider-nav{
+        width: 100%;
+        position: absolute;
+        bottom: -50px;
+        display: flex;
+        justify-content: flex-end;
+        padding-right: 50px;
+        .slick-list{
+            max-width: 500px;
+            .slick-slide{
+                position: relative;
+                border: initial;
+                width: 80px;
+                img{
+                    max-width: 100%;
+                    width: 100%;
+                    height: 100%;
+                }
+                .slider-bgr{
+                    position: absolute;
+                    width: 100%;
+                    height: 100%;
+                    top: 0;
+                    background-color: rgba(0,0,0,0.3);
+                }
+                &:hover{
+                    .slider-bgr{
+                        display: none;
+                    }
+                }
+            }
+        }
+        @media (max-width: 991px){
+            display: none;
+        }
+    }
+    @media (max-width: 991px){
+        height: 450px;
+        .slider-for{
+            height: 450px;
+            .slick-slide{
+                height: 450px;
+            }
         }
     }
 }
